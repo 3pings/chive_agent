@@ -151,7 +151,6 @@ def send2_RESTAPI(obj):
         print "API microservice not running...keep getting data..."
         print
         pass
-
 # run functions in a loop once every minute - until user issue break command
 
 try:
