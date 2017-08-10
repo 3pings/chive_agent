@@ -77,9 +77,9 @@ def call_api(base_url, cookies):
         # make it an int and assign condition
         int_temp = int(temp)
 
-        if int_temp >= 60:         # temp is greater than 60 degrees C
+        if int_temp >= 28:         # temp is greater than 60 degrees C
             condition = "high"
-        elif int_temp >= 48:       # temp between 48 and 60 degrees C
+        elif int_temp >= 23:       # temp between 48 and 60 degrees C
             condition = "elevated"
         else:                      # temp less than 48 degrees C
             condition = "normal"
@@ -121,9 +121,9 @@ def call_api(base_url, cookies):
             # make it an int and assign condition
             int_temp = int(temp)
 
-            if int_temp >= 60:         # temp is greater than 60 degrees C
+            if int_temp >= 28:         # temp is greater than 60 degrees C
                 condition = "high"
-            elif int_temp >= 48:       # temp between 48 and 60 degrees C
+            elif int_temp >= 23:       # temp between 48 and 60 degrees C
                 condition = "elevated"
             else:                      # temp less than 48 degrees C
                 condition = "normal"
