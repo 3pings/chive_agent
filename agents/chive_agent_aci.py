@@ -11,8 +11,6 @@ import time
 apic_ip = os.environ['APIC_IP']
 apic_username = os.environ['APIC_USERNAME']
 apic_password = os.environ['APIC_PASSWORD']
-chive_app = os.environ['CHIVE_APP']
-
 
 def connect_apic(apic_ip):
     # -- connect to APIC section  --
@@ -144,13 +142,14 @@ def send2_RESTAPI(obj):
     try:
         while True:
             headers = {"Content-Type": "application/json"}
-            rsp = requests.post('http://app/device', headers=headers, data=json.dumps(obj))
+            rsp = requests.post('http://app:5000/device', headers=headers, data=json.dumps(obj))
             return rsp.ok
 
     except:
         print "API microservice not running...keep getting data..."
         print
         pass
+
 # run functions in a loop once every minute - until user issue break command
 
 try:
